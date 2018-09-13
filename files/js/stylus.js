@@ -15,7 +15,7 @@
         target = {x: width/2, y: height/2};
 
         canvas = document.getElementById('interactive-anim');
-        if (document.getElementById('interactive-anim') != null && width > 600){
+        if (document.getElementById('interactive-anim') != null){
             canvas.width = width;
             canvas.height = height;
             ctx = canvas.getContext('2d');
@@ -71,7 +71,7 @@
 
     // Event handling
     function addListeners() {
-        if (document.getElementById('interactive-anim') != null && width > 600){
+        if (document.getElementById('interactive-anim') != null){
             if(!('ontouchstart' in window)) {
                 window.addEventListener('mousemove', mouseMove);
             }
@@ -100,7 +100,7 @@
     }
 
     function resize() {
-        if (document.getElementById('interactive-anim') != null && width > 600){
+        if (document.getElementById('interactive-anim') != null){
             width = $(window).innerWidth();
             height = $(window).innerHeight();
             canvas.width = width;
@@ -117,7 +117,7 @@
     }
 
     function animate() {
-        if (document.getElementById('interactive-anim') != null && width > 600){
+        if (document.getElementById('interactive-anim') != null){
             if(animateHeader) {
                 ctx.clearRect(0,0,width,height);
                 for(var i in points) {

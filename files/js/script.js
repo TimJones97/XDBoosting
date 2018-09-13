@@ -34,12 +34,16 @@ $(window).scroll(function() {
       is_safari=false;
     }
     if(is_safari || is_edge_or_ie){
-      $('html').addClass('touch');
+      // $('html').addClass('touch');
     }
     else{
-      $('html').removeClass('touch');
+      // $('html').removeClass('touch');
     }
-    if ($(this).scrollTop() > 50) {                 
+    if ($(window).width() < 991) {                 
+      $('.navbar-default').addClass('solid');
+      $('.navbar-default').addClass('smaller');
+    } 
+    else if ($(this).scrollTop() > 50) {                 
       $('.navbar-default').addClass('smaller');
       $('.navbar-default').addClass('solid');
 
@@ -84,3 +88,13 @@ $(window).scroll(function() {
         }
     });
 }).scroll();
+
+
+//Script to fade out the post when scrolled past
+$(window).scroll(function () {
+    var scrollTop = $(window).scrollTop();
+    var height = ($(window).height() / 2);
+    $('.title-block-main').css({
+        'opacity': ((height - scrollTop) / (height))
+    });
+});
