@@ -194,6 +194,7 @@
   height: 90vh !important;
   width: 100%;
   color: #fff;
+  /*opacity: 0.5;*/
   position: relative;
   background: linear-gradient(-45deg, #23D5AB, #23A6D5, #E73C7E);
   background-size: 400% 400%;

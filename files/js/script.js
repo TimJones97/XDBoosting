@@ -97,7 +97,7 @@ $(window).scroll(function () {
     $('.title-block-main').css({
         'opacity': ((height - scrollTop) / (height))
     });
-    $('.title-main').css({
-        'opacity': ((height - scrollTop) / (height))
-    });
+    // $('.title-main').css({
+    //     'opacity': ((height - scrollTop) / (height))
+    // });
 });
