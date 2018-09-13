@@ -93,7 +93,7 @@ $(window).scroll(function() {
 //Script to fade out the post when scrolled past
 $(window).scroll(function () {
     var scrollTop = $(window).scrollTop();
-    var height = ($(window).height() / 2);
+    var height = ($(window).height() / 5);
     $('.title-block-main').css({
         'opacity': ((height - scrollTop) / (height))
     });
