@@ -22,10 +22,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Poppins:700" rel="stylesheet">
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link href="./files/css/carousel.css" rel="stylesheet">
 	<!-- Remove the ?v1.1 or add it to the end of app.css href depending on which is current to force user browser cache refresh -->
 	<!-- <link href="./files/css/app.css?v=1.1" rel="stylesheet"> -->
-	<link href="./files/css/style.css?v=1.5" rel="stylesheet">
+	<link href="./files/css/style.css?v=1.6" rel="stylesheet">
 </head>
 <body>
 	
@@ -42,9 +41,8 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li><a>HOME</a></li>
-					<!-- <li><a href="#banner">HOME</a></li> -->
-					<li><a href="#about">ABOUT</a></li>
+					<li><a href="#home">HOME</a></li>
+					<li><a href="#about">OVERVIEW</a></li>
 					<li><a href="#how">HOW-TO</a></li>
 					<li><a href="#pricing">PRICING</a></li>
 					<li><a href="#contact">CONTACT</a></li>
@@ -63,7 +61,6 @@
 	<div class="title-block-main">
 		<span class="jarallax">
 			<div class="bg_main">
-			   
 				<canvas id="interactive-anim"></canvas>
 			</div>
 		</span>
@@ -77,9 +74,26 @@
 			</button>
 		</div>
 	</div>
-	<div class="block">
-		<section class="text-block-info" id="about">
-			<h1>About</h1>
+	<div class="block transparent">
+		<section class="text-block-info center intro">
+			<img class="icon-sml" src="./files/img/cup.svg">
+			<h2 class="icon-text center">
+				XDBoosting consists of players from Master and Challenger rankings playing in OCE to boost you to the level you desire.
+			</h2>
+		</section>
+	</div>
+	<!-- Background Image Parallax -->
+	<div class="jarallax" id="about">
+	    <img class="jarallax-img" src="./files/img/wall.jpg" alt="">
+     	<div class="title-left">
+			<h1><i>About</i></h1>
+		</div>
+	</div>
+	<div class="block white">
+		<section class="text-block-info anchor-text">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
@@ -87,8 +101,19 @@
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
 		</section>
-		<section class="text-block-info" id="how">
-			<h1>How To</h1>
+	</div>
+	<!-- Background Image Parallax -->
+	<div class="jarallax" id="how">
+	    <img class="jarallax-img" src="./files/img/wall2.jpg" alt="">
+	    <div class="title-left">
+			<h1><i>How To</i></h1>
+		</div>
+	</div>
+	<div class="block white">
+		<section class="text-block-info anchor-text">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
@@ -96,8 +121,18 @@
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
 		</section>
-		<section class="text-block-info" id="pricing">
-			<h1>Pricing</h1>
+	</div>
+	<div class="jarallax" id="pricing">
+	    <img class="jarallax-img" src="./files/img/wall2.jpg" alt="">
+	    <div class="title-left">
+			<h1><i>Pricing</i></h1>
+		</div>
+	</div>
+	<div class="block white">
+		<section class="text-block-info anchor-text">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
@@ -112,10 +147,9 @@
 		</div>
 	</div>
 	
-	
-	
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <!-- Jarallax -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jarallax/1.9.0/jarallax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.1/velocity.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="
 sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

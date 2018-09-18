@@ -1,4 +1,6 @@
-
+$('.jarallax').jarallax({
+    speed: 0.2
+});
 
 //collapse the navbar upon selection from hamburger menu
 $('.navbar-nav>li>a').on('click', function(){
@@ -52,47 +54,38 @@ $(window).scroll(function() {
       $('.navbar-default').removeClass('solid');
     } 
 });
+//Check if window is resized to less than desktop res width, 
+//If it is, make navbar opaque
 
-$(document).ready(function() {
-    $('a[href*=#]').bind('click', function(e) {
-        e.preventDefault(); // prevent hard jump, the default behavior
+$(window).resize(function () {
+    if ($(window).width() < 991) {                 
+      $('.navbar-default').addClass('solid');
+      $('.navbar-default').addClass('smaller');
+    } 
+    else if ($(this).scrollTop() > 50) {                 
+      $('.navbar-default').addClass('smaller');
+      $('.navbar-default').addClass('solid');
 
-        var target = $(this).attr("href"); // Set the target as variable
-
-        // perform animated scrolling by getting top-position of target-element and set it as scroll target
-        $('html, body').stop().animate({
-            scrollTop: $(target).offset().top
-        }, 600, function() {
-            location.hash = target; //attach the hash (#jumptarget) to the pageurl
-        });
-
-        return false;
+    } else {
+      $('.navbar-default').removeClass('smaller');
+      $('.navbar-default').removeClass('solid');
+    } 
+    $('.jarallax').jarallax('destroy');
+    $('.jarallax').jarallax({
+        speed: 0.2
     });
 });
 
-$(window).scroll(function() {
-    var scrollDistance = $(window).scrollTop();
 
-    // Show/hide menu on scroll
-    //if (scrollDistance >= 850) {
-    //    $('nav').fadeIn("fast");
-    //} else {
-    //    $('nav').fadeOut("fast");
-    //}
-  
-    // Assign active class to nav links while scolling
-    $('.text-block-info').each(function(i) {
-        if ($(this).position().top <= scrollDistance) {
-            $('.nav a.active').removeClass('active');
-            $('.nav a').eq(i).addClass('active');
-        }
-    });
-}).scroll();
+$('body').scrollspy({
+  target: '#topnav',
+  offset: 50
+});
 
 
 //Script to fade out the post when scrolled past
 $(window).scroll(function () {
-    var scrollTop = $(window).scrollTop();
+    var scrollTop = $(window).scrollTop() - 100;
     var height = ($(window).height() / 5);
     $('.title-block-main').css({
         'opacity': ((height - scrollTop) / (height))
@@ -101,3 +94,52 @@ $(window).scroll(function () {
     //     'opacity': ((height - scrollTop) / (height))
     // });
 });
+
+//Script to fade out the banner when scrolled past
+$(window).scroll(function () {
+    var scrollTop = $(window).scrollTop();
+    var height = ($(window).height() / 2); //1.7 previous
+    $('.top').css({
+        'opacity': ((height - scrollTop) / (height))
+    });
+    $('.bottom').css({
+        'opacity': ((height - scrollTop) / (height))
+    });
+    // $('.jarallax-container-1').css({
+    //     'z-index': 'unset !important'
+    // });
+    //  $('.jarallax').css({
+    //     'z-index': 'unset !important'
+    // });
+    $('.jarallax').removeAttr( 'style' );
+    // document.getElementById('jarallax-container-0').style.zIndex="unset";
+    // document.getElementById('jarallax-container-1').style.zIndex="unset";
+    // document.getElementById('jarallax-container-2').style.zIndex="unset";
+    // $('.card-img').removeAttr( 'style' )
+});
+
+
+
+$(window).scroll(function() {
+  //Detect browser and disable fixed backgrounds if on Safari or IE/Edge
+    var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
+    var is_safari = navigator.userAgent.indexOf("Safari") > -1;
+    var is_edge_or_ie;    
+    
+    var ua = window.navigator.userAgent;
+    var trident = ua.indexOf('Trident/');
+    var edge = ua.indexOf('Edge/');
+    if (trident > 0 || edge > 0) {
+      is_edge_or_ie = true;
+    }
+    if ((is_chrome)&&(is_safari)) {
+      is_safari=false;
+    }
+    if(is_safari || is_edge_or_ie){
+      $('html').addClass('touch');
+    }
+    else{
+      $('html').removeClass('touch');
+    }
+});
+
