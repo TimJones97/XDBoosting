@@ -308,7 +308,7 @@
 
 .jarallax .title-left {
   position: absolute;
-  top: 20vh;
+  top: 25vh;
   background: white;
   z-index: 1000;
   padding: 0px 15px 0px 60px;
@@ -331,7 +331,6 @@
 }
 
 .jarallax .title-left h1 {
-
   font-size: 40px;
 }
 
